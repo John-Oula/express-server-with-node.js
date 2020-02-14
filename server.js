@@ -4,9 +4,7 @@ const app = express();
 
 app.use(parser.urlencoded({extended : true }));
 
-function alert(){
-	$.alert("discover");
-}
+
 app.get("/",function(req,res){
 
 	res.sendFile(__dirname + "/index.html");
@@ -15,8 +13,8 @@ app.get("/",function(req,res){
 
 app.post("/",function(req,res){
 	var num1 = Number(req.body.num1);
-	var result = num1 * 10;
-	res.send("eqeddq" + result);
+	var result = num1+ 10;
+	res.send( result);
 }
 );
 
